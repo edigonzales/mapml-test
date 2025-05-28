@@ -1,0 +1,19 @@
+<mapml- xmlns="http://www.w3.org/1999/xhtml">
+  <map-head>
+    <map-title>WMS Layer</map-title>
+    <meta http-equiv="Content-Type" content="text/mapml;projection=OSMTILE"/>
+    <meta charset="utf-8"/>
+    <map-link rel="license" href="https://www.openstreetmap.org/copyright" title="© OpenStreetMap contributors CC BY-SA"></map-link>
+  </map-head>
+  <map-body>
+    <map-extent units="OSMTILE" checked="checked" hidden="hidden">
+      <map-input name="zoom" type="zoom"></map-input>
+      <map-input name="col" type="location" axis="x"></map-input>
+      <map-input name="row" type="location" axis="y"></map-input>
+      <map-link rel="tile" 
+            tref="https://geo-i.so.ch/wms?service=WMS&amp;request=GetMap&amp;layers=ch.so.agi.hintergrundkarte_sw&amp;styles=&amp;format=image/png&amp;transparent=true&amp;version=1.3.0&amp;srs=EPSG:3857&amp;width=256&amp;height=256&amp;bbox={xmin},{ymin},{xmax},{ymax}" 
+            type="image/png"></map-link>
+    </map-extent>
+  </map-body>
+</mapml-> 
+

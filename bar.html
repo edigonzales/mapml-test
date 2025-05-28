@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MapML with WMS Layer</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@maps4html/mapml@latest/dist/mapml.js"></script>
+  <style>
+    #map {
+      width: 600px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+
+  <mapml-viewer id="map" projection="EPSG:3857" center="[860000, 6000000]" zoom="10">
+    <layer- src="https://tile.openstreetmap.org/{z}/{x}/{y}.png" type="image/png"></layer->
+    <layer-wms
+      href="https://ows.terrestris.de/osm/service?"
+      layers="OSM-WMS"
+      format="image/png"
+      transparent="true"
+    ></layer-wms>
+  </mapml-viewer>
+
+</body>
+</html>
